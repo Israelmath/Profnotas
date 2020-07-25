@@ -1,0 +1,292 @@
+<InserirDados>
+    size_hint: None, None
+    width: 700
+    height: 600
+    BoxLayout:
+        orientation: 'vertical'
+        SeparadorHorizontal:
+            size_hint: 1,0.3
+            padding: 0,0,0,10
+            BoxLayout:
+                id: info_aluno
+                size_hint: 0.75, 1
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.25, 1
+                padding: 5,0,0,0
+                Label:
+                    text: 'Escolha o\ntrimestre:'
+                    color: 0,0,0,1
+                    halign: 'center'
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: 35
+                Button:
+                    id: trimestre
+                    text: 'Trimestre'
+                    size_hint: None, None
+                    color: 0,0,0, 1
+                    width: 110
+                    height: 30
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: 22
+                    background_normal: ''
+                    background_color: 252/255, 212/255, 35/255, 1
+                    pos_hint: {'right': 0.85, 'middle': 1}
+                    on_release: options.open(self)
+
+                    Widget:
+                        on_parent: options.dismiss()
+
+                        DropDown:
+                            id: options
+                            Button:
+                                size_hint: None, None
+                                width: 110
+                                height: 30
+                                text: '1º Trimestre'
+                                color: 0,0,0, 1
+                                font_name: 'Fonts/AmaticSC-Bold.ttf'
+                                font_size: 22
+                                background_normal: ''
+                                background_color: 252/255, 212/255, 35/255, 1
+                                on_release:
+                                    options.dismiss()
+                                    root.primeiro_tri(self)
+                            Button:
+                                size_hint: None, None
+                                width: 110
+                                height: 30
+                                background_normal: ''
+                                background_color: 252/255, 212/255, 35/255, 1
+                                text: '2º Trimestre'
+                                font_name: 'Fonts/AmaticSC-Bold.ttf'
+                                font_size: 22
+                                color: 0,0,0, 1
+                                on_release:
+                                    options.dismiss()
+                                    root.segundo_tri(self)
+                            Button:
+                                size_hint: None, None
+                                width: 110
+                                height: 30
+                                background_normal: ''
+                                background_color: 252/255, 212/255, 35/255, 1
+                                text: '3º Trimestre'
+                                font_name: 'Fonts/AmaticSC-Bold.ttf'
+                                font_size: 22
+                                color: 0,0,0, 1
+                                on_release:
+                                    options.dismiss()
+                                    root.terceiro_tri(self)
+        GridLayout:
+            size_hint: 1, 0.7
+            cols: 3
+            padding: 5,10,5,5
+            spacing: 5
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.33, 1
+                padding: 0, 0, 10, 0
+                TituloDir:
+                    Label:
+                        text: 'Redações'
+                        color: 0,0,0,1
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        font_size: 35
+                BoxLayout:
+                    Label:
+                        text: 'Redação 1'
+                        color: 0,0,0,1
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        font_size: 25
+                    RedacoesInput:
+                        font_size: 25
+                        size_hint: None, None
+                        width: 50
+                        height: 40
+                        pos_hint: {'top': 0.75}
+                        multiline: False
+                        write_tab: False
+                        background_color: 0,0,0,0
+                        input_filter: 'float'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        hint_text: '0-8'
+                        color: 0,0,0, 1
+                        font_size: 25
+                        id: red1
+                BoxLayout:
+                    Label:
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        text: 'Redação 2'
+                        color: 0,0,0,1
+                        font_size: 25
+                    RedacoesInput:
+                        font_size: 25
+                        size_hint: None, None
+                        width: 50
+                        height: 40
+                        pos_hint: {'top': 0.75}
+                        multiline: False
+                        write_tab: False
+                        background_color: 0,0,0,0
+                        input_filter: 'float'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        hint_text: '0-8'
+                        color: 0,0,0, 1
+                        font_size: 25
+                        id: red2
+                BoxLayout:
+                    Label:
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        text: 'Redação 3'
+                        color: 0,0,0,1
+                        font_size: 25
+                    RedacoesInput:
+                        font_size: 25
+                        size_hint: None, None
+                        width: 50
+                        height: 40
+                        pos_hint: {'top': 0.75}
+                        multiline: False
+                        write_tab: False
+                        background_color: 0,0,0,0
+                        input_filter: 'float'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        hint_text: '0-8'
+                        color: 0,0,0, 1
+                        font_size: 25
+                        id: red3
+                BoxLayout:
+                    Label:
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        text: 'Redação 4'
+                        color: 0,0,0,1
+                        font_size: 25
+                    RedacoesInput:
+                        font_size: 25
+                        size_hint: None, None
+                        width: 50
+                        height: 40
+                        pos_hint: {'top': 0.75}
+                        multiline: False
+                        write_tab: False
+                        input_filter: 'float'
+                        background_color: 0,0,0,0
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        hint_text: '0-8'
+                        color: 0,0,0, 1
+                        font_size: 25
+                        id: red4
+            Tabela:
+                orientation: 'vertical'
+                size_hint: 0.33, 1
+                padding: 5, 0, 5, 0
+                TituloDir:
+                    Label:
+                        text: 'Provas'
+                        color: 0,0,0,1
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        font_size: 35
+                BoxLayout:
+                    padding: 5, 0, 25, 0
+                    Label:
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        text: 'Prova'
+                        color: 0,0,0,1
+                        font_size: 25
+                    TextInput:
+                        font_size: 25
+                        size_hint: None, None
+                        width: 50
+                        height: 40
+                        pos_hint: {'top': 0.75}
+                        background_color: 0,0,0,0
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        hint_text: '0-10'
+                        color: 0,0,0, 1
+                        font_size: 25
+                        input_filter: 'int'
+                        multiline: False
+                        write_tab: False
+                        id: prova
+                BoxLayout:
+                    padding: 5, 0, 25, 0
+                    pos_hint: {'center_x': 0.5}
+                    Label:
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        text: 'Recuperação'
+                        halign: 'center'
+                        color: 0,0,0,1
+                        font_size: 25
+                    BoxLayout:
+                        id: rec
+                BoxLayout:
+                    size_hint: 0.6, 0.8
+                    pos_hint: {'center_x': 0.5}
+                BoxLayout:
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.33, 1
+                padding: 3,0,5,0
+                TituloDir:
+                    Label:
+                        text: 'Participação'
+                        color: 0,0,0,1
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        font_size: 35
+                BoxLayout:
+                    Label:
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        text: 'Participação'
+                        color: 0,0,0,1
+                        font_size: 25
+                    BoxLayout:
+                        id: part
+                BoxLayout:
+                    Label:
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        text: 'Redações feitas'
+                        color: 0,0,0,1
+                        font_size: 25
+                    TextInput:
+                        font_size: 25
+                        size_hint: None, None
+                        width: 50
+                        height: 40
+                        pos_hint: {'top': 0.75}
+                        multiline: False
+                        write_tab: False
+                        background_color: 0,0,0,0
+                        hint_text: '0-8'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        input_filter: 'int'
+                        color: 0,0,0, 1
+                        font_size: 25
+                        id: qtd
+                BoxLayout:
+                    size_hint: 0.6, 0.8
+                    pos_hint: {'center_x': 0.5}
+                    Button:
+                        canvas.before:
+                            Color:
+                                rgba: 119/255, 150/255, 254/255, 1
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: 120,70
+                                radius: [35]
+                        color: 1,1,1, 1
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        font_size: 22
+                        background_normal: ''
+                        background_color: 0,0,0,0
+                        pos_hint: {'right': 1, 'middle': 1}
+                        text: 'Inserir                  notas'
+                        text_size: self.size
+                        halign: 'center'
+                        valign: 'middle'
+                        on_press:
+                            self.text = 'Inserindo...'
+                        on_release:
+                            root.dismiss()
+                            root.insere_info()
+                            app.get_running_app().root.get_screen('Editar info').update(just_entered = False)

@@ -1,0 +1,156 @@
+<EditarDadosCadastrais>
+    size_hint: None, None
+    width: 700
+    height: 600
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 20
+        SeparadorHorizontal:
+            id: info_aluno
+            size_hint: 1, 0.3
+            padding: 5,0,5,10
+        GridLayout:
+            cols: 3
+            spacing: 10
+            size_hint: 1, 0.5
+            BoxLayout:
+                orientation: 'vertical'
+                TituloDir:
+                    Label:
+                        text: 'Nome e sobrenome'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        color: 0,0,0,1
+                        font_size: 25
+                BoxLayout:
+                    padding: 0,0,10,0
+                    Label:
+                        text: 'Nome'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        color: 0,0,0,1
+                        font_size: 25
+                    TextInput:
+                        id: nome
+                        size_hint: 1, 0.5
+                        pos_hint: {'center_y': 0.5}
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        hint_text: 'Fulano(a)'
+                        font_size: 25
+                        multiline: False
+                        write_tab: False
+                        background_color: 0,0,0,0
+                        color: 0,0,0, 1
+                BoxLayout:
+                    padding: 0,0,10,0
+                    Label:
+                        text: 'Sobrenome'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        color: 0,0,0,1
+                        font_size: 25
+                    TextInput:
+                        id: sobrenome
+                        size_hint: 1, 0.5
+                        pos_hint: {'center_y': 0.5}
+                        background_color: 0,0,0,0
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        hint_text: 'de Tal'
+                        color: 0,0,0, 1
+                        font_size: 25
+                        multiline: False
+                        write_tab: False
+            BoxLayout:
+                orientation: 'vertical'
+                TituloDir:
+                    Label:
+                        text: 'Série e turma'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        color: 0,0,0,1
+                        font_size: 25
+                BoxLayout:
+                    padding: 0,0,10,0
+                    Label:
+                        text: 'Série'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        color: 0,0,0,1
+                        font_size: 25
+                    TextInput:
+                        id: serie
+                        size_hint: 1, 0.5
+                        pos_hint: {'center_y': 0.5}
+                        background_color: 0,0,0,0
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        hint_text: '0-9'
+                        color: 0,0,0, 1
+                        font_size: 25
+                        input_filter: 'int'
+                        multiline: False
+                        write_tab: False
+                BoxLayout:
+                    padding: 0,0,10,0
+                    Label:
+                        text: 'Turma'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        color: 0,0,0,1
+                        font_size: 25
+                    TextInput:
+                        id: turma
+                        size_hint: 1, 0.5
+                        pos_hint: {'center_y': 0.5}
+                        background_color: 0,0,0,0
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        hint_text: 'A, B, C, ...'
+                        color: 0,0,0, 1
+                        font_size: 25
+                        multiline: False
+                        write_tab: False
+            BoxLayout:
+                orientation: 'vertical'
+                TituloDir:
+                    Label:
+                        text: 'Número'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        color: 0,0,0,1
+                        font_size: 25
+                BoxLayout:
+                    padding: 0,0,10,0
+                    Label:
+                        text: 'Número'
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        color: 0,0,0,1
+                        font_size: 25
+                    TextInput:
+                        id: numero
+                        size_hint: 1, 0.5
+                        pos_hint: {'center_y': 0.5}
+                        background_color: 0,0,0,0
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        hint_text: 'Ex: 14'
+                        color: 0,0,0, 1
+                        font_size: 25
+                        input_filter: 'int'
+                        multiline: False
+                        write_tab: False
+                BoxLayout:
+                    padding: 0,0,10,0
+                    size_hint: 0.6, 0.4
+                    Button:
+                        canvas.before:
+                            Color:
+                                rgba: 119/255, 150/255, 254/255, 1
+                            RoundedRectangle:
+                                pos: self.pos
+                                size: 120,70
+                                radius: [35]
+                        color: 1,1,1, 1
+                        font_name: 'Fonts/AmaticSC-Bold.ttf'
+                        font_size: 22
+                        background_normal: ''
+                        background_color: 0,0,0,0
+                        pos_hint: {'right': 1, 'middle': 1}
+                        text: 'Inserir dados'
+                        text_size: self.size
+                        halign: 'center'
+                        valign: 'top'
+                        on_press: self.text = 'Inserindo...'
+                        on_release: root.insere_info()
+        BoxLayout:
+            size_hint: 0.2, 0.2

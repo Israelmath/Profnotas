@@ -1,0 +1,160 @@
+<CriarUsuarioTela>
+    canvas.before:
+        Color:
+            rgba: 1,1,1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        voltar_path:
+        orientation: 'vertical'
+        padding: 5,0,5,5
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1, 0.1
+            Button:
+                size_hint: 0.1, 1
+                pos_hint: {'center_y': 0.5}
+                background_normal: 'Images/signs.png'
+                border: 0,0,0,0
+                size_hint: None, None
+                size: 35,35
+                on_release: app.root.current = 'Tela de login'
+            TituloTela:
+                size_hint: 0.6, 1
+                pos_hint: {'left': 1}
+                text: 'Criar usuário'
+        BoxLayout:
+            size_hint: 0.6, 0.9
+            padding: 0,50,0,15
+            pos_hint: {'center_x': 0.4}
+            spacing: 2
+            orientation: 'vertical'
+            BoxLayout:
+                Label:
+                    text: 'Nome: '
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: self.height/2
+                    color: 0,0,0, 1
+                LogineSenha:
+                    id: nome
+                    size_hint: 0.85, 0.7
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    background_normal: ''
+                    background_active: ''
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    hint_text: 'Qual o seu nome?'
+                    font_size: self.height/2.1
+                    background_color: 15/255, 25/255, 46/255, 1
+                    multiline: False
+                    write_tab: False
+            BoxLayout:
+                Label:
+                    text: 'Sobrenome: '
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: self.height/2
+                    color: 0,0,0, 1
+                LogineSenha:
+                    id: sobrenome
+                    size_hint: 0.85, 0.7
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    background_normal: ''
+                    background_active: ''
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    hint_text: 'Qual o seu sobrenome?'
+                    font_size: self.height/2.1
+                    background_color: 15/255, 25/255, 46/255, 1
+                    multiline: False
+                    write_tab: False
+            BoxLayout:
+                Label:
+                    text: 'Login: '
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: self.height/2
+                    color: 0,0,0, 1
+                LogineSenha:
+                    id: login
+                    size_hint: 0.85, 0.7
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    background_normal: ''
+                    background_active: ''
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    hint_text: 'Como quer ser chamado(a)?'
+                    font_size: self.height/2.1
+                    background_color: 15/255, 25/255, 46/255, 1
+                    multiline: False
+                    write_tab: False
+                    on_text: root.verifica_login(self)
+            BoxLayout:
+                Label:
+                    text: 'Disciplina: '
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: self.height/2
+                    color: 0,0,0, 1
+                LogineSenha:
+                    id: disciplina
+                    size_hint: 0.85, 0.7
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    background_normal: ''
+                    background_active: ''
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    hint_text: 'Qual disciplina você ministra?'
+                    font_size: self.height/2.1
+                    background_color: 15/255, 25/255, 46/255, 1
+                    multiline: False
+                    write_tab: False
+            BoxLayout:
+                Label:
+                    text: 'Senha: '
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: self.height/2
+                    color: 0,0,0, 1
+                LogineSenha:
+                    id: senha
+                    size_hint: 0.85, 0.7
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    background_normal: ''
+                    background_active: ''
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    hint_text: 'Digite uma senha'
+                    font_size: self.height/2.1
+                    password: True
+                    background_color: 15/255, 25/255, 46/255, 1
+                    multiline: False
+                    write_tab: False
+            BoxLayout:
+                Label:
+                    text: 'Confirmar senha: '
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: self.height/2
+                    color: 0,0,0, 1
+                LogineSenha:
+                    id: confirmacao
+                    size_hint: 0.85, 0.7
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    background_normal: ''
+                    background_active: ''
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    hint_text: 'Confirme a senha'
+                    font_size: self.height/2.1
+                    password: True
+                    background_color: 15/255, 25/255, 46/255, 1
+                    multiline: False
+                    write_tab: False
+            BoxLayout:
+                Label:
+                    id: verificacao
+                    size_hint:1, 0.05
+                    pos_hint: {'top': 0.8}
+                    text: ''
+                    font_size: max(self.width, self.height)/25
+                    color: 1,64/255,64/255, 0.7
+                EntrarCadastrar:
+                    size_hint: 0.3, 0.5
+                    pos_hint: {'top': 1}
+                    background_color: 0,0,0,0
+                    text: 'Cadastrar'
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    color: 0,0,0, 1
+                    font_size: self.height/2
+                    on_release: root.verifica(root)

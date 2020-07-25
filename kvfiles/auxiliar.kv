@@ -1,0 +1,111 @@
+<AlterarGraphBubble>
+    orientation: 'vertical'
+    size_hint: None, None
+    size: 160, 120
+    arrow_pos: 'left_bottom'
+    pos_hint: {'center_x': .5, 'y': .6}
+    BubbleButton:
+        text: '1º trimestre'
+        font_name: 'Fonts/AmaticSC-Bold.ttf'
+        font_size: 20
+        color: 1,1,1,1
+        on_release:
+            root.parent.seleciona_informacoes(info = '1')
+            root.parent.dismiss_bubble(root)
+    BubbleButton:
+        text: '2º trimestre'
+        font_name: 'Fonts/AmaticSC-Bold.ttf'
+        font_size: 20
+        color: 1,1,1,1
+        on_release:
+            root.parent.seleciona_informacoes(info = '2')
+            root.parent.dismiss_bubble(root)
+    BubbleButton:
+        text: '3º trimestre'
+        font_name: 'Fonts/AmaticSC-Bold.ttf'
+        font_size: 20
+        color: 1,1,1,1
+        on_release:
+            root.parent.seleciona_informacoes(info = '3')
+            root.parent.dismiss_bubble(root)
+    BubbleButton:
+        font_size: 20
+        text: 'x'
+        on_release: root.parent.dismiss_bubble(root)
+
+<Tabela>
+    canvas.before:
+        Color:
+            rgba: 0,0,0, 1
+        Rectangle:
+            pos: self.x, self.y+self.height/4
+            size: 1, self.height/2
+        Rectangle:
+            pos: self.x+self.width-1, self.y+ self.height/4
+            size: 1, self.height/2
+
+<SaudacaoBox>
+    canvas.before:
+        Color:
+            rgba: 119/255,150/255,1,1
+        Line:
+            points: self.x+self.height/8.3, self.y, self.x+self.width-self.height/8.3, self.y
+        Line:
+            points: self.x+self.height/8.3, self.y+self.height, self.x+self.width-self.height/8.3, self.y+self.height
+        Line:
+            points: self.x, self.y+self.height/8.3, self.x, self.y+self.height-self.height/8.3
+        Line:
+            points: self.x+self.width, self.y+self.height/8.3, self.x+self.width, self.y+self.height-self.height/8.3
+        Line:
+            ellipse: self.x, self.y, self.height/4, self.height/4, 180, 270
+        Line:
+            ellipse: self.x, self.y+self.height-self.height/4, self.height/4, self.height/4, 270, 360
+        Line:
+            ellipse: self.x+self.width-self.height/4, self.y, self.height/4, self.height/4, 90, 180
+        Line:
+            ellipse: self.x+self.width-self.height/4, self.y+self.height-self.height/4, self.height/4, self.height/4, 0, 90
+
+<SeparadorHorizontal>
+    canvas.before:
+        Color:
+            rgba: 0,85/255,200/255,1
+        Rectangle:
+            pos: self.pos
+            size: self.width, 2
+
+<DropMenuTelas>
+    id: menu
+    orientation: 'vertical'
+    auto_width: False
+    pos_hint: {'right': 1}
+    Button:
+        text: 'Relatório'
+        background_normal: ''
+        background_color: 1,1,1,1
+        font_name: 'Fonts/AmaticSC-Bold.ttf'
+        size_hint: None, None
+        font_size: 20
+        width: 100
+        height: 40
+        color: 0,0,0,1
+        on_release: app.get_running_app().root.criar_relatorio(self)
+    Button:
+        text: 'Sair'
+        color: 0,0,0,1
+        background_normal: ''
+        background_color: 1,1,1,1
+        font_name: 'Fonts/AmaticSC-Bold.ttf'
+        size_hint: None, None
+        font_size: 20
+        width: 100
+        height: 40
+        on_release: app.get_running_app().root.get_screen('Menu inicial').sair()
+
+<AdicionaAnotacao>
+    canvas.before:
+        Color:
+            rgba: 0,180/255,1, 0.1
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [self.height/4]

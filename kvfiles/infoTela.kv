@@ -1,0 +1,112 @@
+<InfoTela>
+    canvas.before:
+        Color:
+            rgba: 1,1,1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 7
+        BoxLayout:
+            size_hint: 1, 0.1
+            padding: 10, 5
+            BotaoVoltar:
+                pos_hint: {'center_x': 1, 'top': 0.7}
+            TituloTela:
+                text: 'Informações e edições'
+            BotaoMenu:
+                pos_hint: {'left': 1, 'top': 0.8}
+        GridLayout:
+            size_hint: 1, 0.9
+            padding: 4,0,4,4
+            spacing: 5
+            cols: 2
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.45, 1
+                padding: 0,0,0,2
+                BoxLayout:
+                    id: resumo
+                    size_hint: 1, 0.45
+                    pos_hint: {'middle': 1}
+                GridLayout:
+                    size_hint: 1, 0.45
+                    pos_hint: {'bottom': 1}
+                    cols: 4
+                    padding: 0,40,0,0
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Button:
+                            background_normal: 'Images/profile.png'
+                            border: 0,0,0,0
+                            size_hint: None, None
+                            size: (50*self.parent.width/131),(50*self.parent.width/131)
+                            pos_hint: {'center_x': 0.5}
+                            on_release: app.get_running_app().root.open_popup_EditarDadosCadastrais()
+                        Label:
+                            text: 'Atualizar\ndados'
+                            font_name: 'Fonts/AmaticSC-Bold.ttf'
+                            font_size: 24
+                            color: 0,0,0, 1
+                            halign: 'center'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Button:
+                            background_normal: 'Images/interface.png'
+                            border: 0,0,0,0
+                            size_hint: None, None
+                            size: (50*self.parent.width/131),(50*self.parent.width/131)
+                            pos_hint: {'center_x': 0.5}
+                            on_release: app.get_running_app().root.open_popup_inserirnotas()
+                        Label:
+                            text: 'Atualizar\nnotas'
+                            font_name: 'Fonts/AmaticSC-Bold.ttf'
+                            font_size: 24
+                            color: 0,0,0, 1
+                            halign: 'center'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Button:
+                            background_normal: 'Images/arrows.png'
+                            border: 0,0,0,0
+                            size_hint: None, None
+                            size: (50*self.parent.width/131),(50*self.parent.width/131)
+                            pos_hint: {'center_x': 0.5}
+                            on_release: root.just_update()
+                        Label:
+                            text: 'Atualizar\ntela'
+                            font_name: 'Fonts/AmaticSC-Bold.ttf'
+                            font_size: 24
+                            color: 0,0,0, 1
+                            halign: 'center'
+                    BoxLayout:
+                        orientation: 'vertical'
+                        Button:
+                            background_normal: 'Images/graphs.png'
+                            border: 0,0,0,0
+                            size_hint: None, None
+                            size: (50*self.parent.width/131),(50*self.parent.width/131)
+                            pos_hint: {'center_x': 0.5}
+                            on_release:
+                                if len(root.children) == 2: root.bubble(root)
+                        Label:
+                            text: 'Alterar\ngráfico'
+                            font_name: 'Fonts/AmaticSC-Bold.ttf'
+                            font_size: 24
+                            color: 0,0,0, 1
+                            halign: 'center'
+            BoxLayout:
+                id: grafico
+                size_hint: 0.55, 1
+            ScrollView:
+                size_hint: 0.55, 1
+                BoxLayout:
+                    id: integral
+                    orientation: 'vertical'
+                    spacing: 3
+                    size_hint_y: None
+                    height: self.minimum_height
+            BoxLayout:
+                id: medias
+                size_hint: 0.45, 1

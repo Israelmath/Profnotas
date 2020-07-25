@@ -1,0 +1,19 @@
+<AlunoNaLista>
+    size_hint_y: None
+    height: 120
+    canvas.before:
+        Color:
+            rgba: 119/255,150/255,254/255, 1
+        Rectangle:
+            pos: self.x + self.height/2, self.y
+            size: self.width - self.height, self.height
+        Ellipse:
+            pos: self.x, self.y
+            size: self.height, self.height
+        Ellipse:
+            pos: self.x + self.width - self.height, self.y
+            size: self.height, self.height
+    BoxLayout:
+        id: info_resumo
+        size_hint: 0.9, 0.7
+        pos_hint: {'y': 0.16}

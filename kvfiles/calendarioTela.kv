@@ -1,0 +1,69 @@
+<CalendarioTela>
+    canvas.before:
+        Color:
+            rgba: 1,1,1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 7
+        BoxLayout:
+            size_hint: 1, 0.2
+            padding: 10, 5
+            BotaoVoltar:
+                pos_hint: {'center_x': 1, 'top': 0.7}
+            TituloTela:
+                text: 'Calendário'
+            BotaoMenu:
+                pos_hint: {'left': 1, 'top': 0.8}
+        BoxLayout:
+            padding: 0,0,0,50
+            size_hint: 1, 0.8
+            BoxLayout:
+                size_hint: 0.4, 1
+                pos_hint: {'center_y':0.7}
+                PassaMes:
+                    size_hint: 0.1, 0.1
+                    pos_hint: {'center_y' : 0.3}
+                    background_color: 0,0,0,0
+                    color: 0,0,0, 1
+                    text: '<'
+                    on_release: root.volta_mes()
+                SaudacaoBox:
+                    orientation: 'vertical'
+                    size_hint: 0.6, 0.6
+                    spacing: 15
+                    BoxLayout:
+                        padding: 0,0,0,20
+                        Label:
+                            id: mes_e_ano
+                            font_name: 'Fonts/AmaticSC-Bold.ttf'
+                            font_size: max(self.height, self.width)/10
+                            color: 0,0,0,1
+                    GridLayout:
+                        id: datas
+                        spacing: 1
+                        size_hint: None, None
+                        width: min(root.height, root.width)*0.45
+                        height: min(root.height, root.width)*0.45
+                        pos_hint: {'center_x': 0.5}
+                        cols: 7
+                PassaMes:
+                    size_hint: 0.1, 0.1
+                    pos_hint: {'center_y' : 0.3}
+                    background_color: 0,0,0,0
+                    color: 0,0,0, 1
+                    text: '>'
+                    on_release: root.proximo_mes()
+            BoxLayout:
+                id: anotacoes
+                size_hint: 0.6, 1
+
+<PassaMes@Button>
+    canvas.before:
+        Color:
+            rgba: 0,180/255,1, 0.05
+        Ellipse:
+            pos: self.pos
+            size: min(self.height, self.width), min(self.height, self.width)

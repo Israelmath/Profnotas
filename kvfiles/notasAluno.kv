@@ -1,0 +1,16 @@
+<NotasAluno>
+    canvas.before:
+        Color:
+            rgba: 252/255, 157/255, 154/255, 1
+        Rectangle:
+            pos: self.x, self.y
+            size: 4, self.height
+        Rectangle:
+            pos: self.x + 4, self.y + self.height - 4
+            size: self.width - 4, 4
+        Rectangle:
+            pos: self.x + self.width - 4, self.y
+            size: 4, self.height - 4
+        Rectangle:
+            pos: self.x + 4, self.y
+            size: self.width - 8, 4

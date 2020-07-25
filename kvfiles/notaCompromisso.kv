@@ -1,0 +1,71 @@
+<NotaCompromisso>
+    canvas.before:
+        Color:
+            rgba: 227/255, 216/255, 235/255, 0.5
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [self.height/4]
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: 0.85, 0.85
+        pos_hint: {'center_x': 0.55, 'center_y': 0.5}
+        spacing: 10
+        BoxLayout:
+            spacing: 10
+            Label:
+                text: 'Título: '
+                color: 0,0,0,1
+                font_size: 16
+            TextInput:
+                id: Titulo
+                size_hint: 0.7, 1
+                background_active: ''
+                background_color: 0,0,0,0
+                color: 0,0,0,1
+                font_size: 16
+                hint_text: 'Testando'
+                write_tab: False
+                multiline: False
+        BoxLayout:
+            spacing: 10
+            Label:
+                text: 'Hora'
+                color: 0,0,0,1
+                font_size: 16
+            TextInput:
+                id: Hora
+                size_hint: 0.7, 1
+                pos_hint: {'center_y': 0.5}
+                hint_text: 'Ex: Dia/Mês/Ano'
+                font_size: 16
+                background_active: ''
+                background_color: 0,0,0,0
+                color: 0,0,0,1
+                write_tab: False
+                multiline: False
+        BoxLayout:
+            spacing: 10
+            Label:
+                text: 'Comentário: '
+                color: 0,0,0,1
+                font_size: 16
+            TextInput:
+                id: Anotacao
+                background_active: ''
+                background_color: 0,0,0,0
+                font_size: 16
+                color: 0,0,0,1
+                size_hint: 0.7, 1
+                pos_hint: {'center_y': 0.5}
+                hint_text: ''
+                write_tab: False
+                multiline: False
+        Button:
+            size_hint: 0.3, 0.9
+            pos_hint: {'center_x': 0.8}
+            text: 'Marcar'
+            color: 0,0,0,1
+            background_color: 0,0,0,0
+            background_active: ''
+            on_release: root.guardar_compromisso(root)

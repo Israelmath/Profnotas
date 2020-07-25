@@ -1,0 +1,31 @@
+<LabelCompromisso>
+    cor: 1,0.5,0,0.1
+    canvas.before:
+        Color:
+            rgba: self.cor
+        # Triangle:
+        #     points: root.x, root.height/2, root.x+root.height/3, root.y, root.x+root.height/3, root.y+root.height
+        Rectangle:
+            pos: self.x, self.y
+            size: self.width, self.height
+    BoxLayout:
+        padding: 0,5,0,5
+        GridLayout:
+            cols: 3
+            Label:
+                id: Titulo
+                # size_hint: None, None
+                # size: self.texture_size
+                font_size: max(self.height, self.width)/10
+                color: 0,0,0,1
+            Label:
+                id: Data
+                # size_hint: None, None
+                # size: self.texture_size
+                font_size: max(self.height, self.width)/15
+                color: 0,0,0,1
+            Label:
+                id: Comentario
+                # size_hint: None, None
+                # size: self.texture_size
+                color: 0,0,0,1

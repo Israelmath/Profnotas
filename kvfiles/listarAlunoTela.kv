@@ -1,0 +1,26 @@
+<ListarAlunoTela>
+    canvas.before:
+        Color:
+            rgba: 1,1,1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint: 1, 0.2
+            padding: 10, 5
+            BotaoVoltar:
+                pos_hint: {'center_x': 1, 'top': 0.7}
+            TituloTela:
+                text: 'Listar alunos'
+            BotaoMenu:
+                pos_hint: {'left': 1, 'top': 0.8}
+        ScrollView:
+            BoxLayout:
+                id: lista_de_alunos
+                orientation: 'vertical'
+                padding: self.width/10,0,self.width/10,10
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 8

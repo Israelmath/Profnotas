@@ -1,0 +1,35 @@
+<Anotacoes>
+    canvas.before:
+        Color:
+            rgba: 0,0,0.4,0.05
+        RoundedRectangle:
+            pos: self.x + self.height/6, self.y
+            size: self.size
+            radius: [self.height/8]
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            size_hint: 1, 0.1
+            pos_hint: {'center_x': 0.55}
+            text: 'Anotações'
+            font_name: 'Fonts/AmaticSC-Bold.ttf'
+            font_size: max(self.width, self.height)/17
+            color: 0,0,0,1
+        AdicionaAnotacao:
+            size_hint: 0.75, 0.1
+            pos_hint: {'center_x': 0.55, 'center_y': 0.5}
+            background_color: 0,0,0,0
+            text: '+'
+            font_size: 35
+            color: 11/255, 72/255, 107/255, 1
+            on_release: root.cria_compromisso()
+        ScrollView:
+            size_hint: 0.9, 0.8
+            pos_hint: {'center_x': 0.5}
+            BoxLayout:
+                id: notas
+                orientation: 'vertical'
+                padding: 0,20,0,0
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 8

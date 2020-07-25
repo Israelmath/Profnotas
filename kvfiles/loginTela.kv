@@ -1,0 +1,91 @@
+<LoginTela>
+    canvas.before:
+        Color:
+            rgba: 1,1,1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        Image:
+            size_hint: 1, 0.45
+            source: 'Images/Logo-ProfNotas.png'
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint: 1, 0.55
+            padding: self.width/4,5,self.width/4,50
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    text: 'Login: '
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: self.height/2
+                    color: 0,0,0, 1
+                LogineSenha:
+                    id: login
+                    size_hint: 0.7, 1
+                    pos_hint: {'center_x': 0.5}
+                    background_normal: ''
+                    background_active: ''
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    hint_text: 'Como quer ser chamado(a)'
+                    font_size: self.height/2
+                    background_color: 15/255, 25/255, 46/255, 1
+                    multiline: False
+                    write_tab: False
+            BoxLayout:
+                orientation: 'vertical'
+                pos_hint: {'center_x': 0.5}
+                Label:
+                    text: 'Senha: '
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: self.height/2
+                    color: 0,0,0, 1
+                LogineSenha:
+                    id: senha
+                    size_hint: 0.7, 1
+                    pos_hint: {'center_x': 0.5}
+                    background_active: ''
+                    background_normal: ''
+                    background_color: 15/255, 25/255, 46/255, 1
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    hint_text: 'Senha'
+                    font_size: self.height/2
+                    password: True
+                    cursor_blink: 10
+                    set_cursor: 5,5
+                    multiline: False
+                    write_tab: False
+            BoxLayout:
+                padding: 0, 5, 0, 0
+                Button:
+                    size_hint: 0.7, 1
+                    text: 'Ainda não tenho cadastro'
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    color: 0,0,0, 1
+                    font_size: self.height/3
+                    background_color: 0,0,0,0
+                    on_press:
+                        self.text = 'É para já!'
+                        self.color = 1,1,1,1
+                        self.background_color = 0,180/255,1, 0.8
+                    on_release:
+                        self.text = 'Ainda não tenho cadastro?'
+                        self.color = 0,0,0,1
+                        self.background_color = 0,0,0,0
+                        app.root.current = 'Cria usuario'
+                EntrarCadastrar:
+                    size_hint: 0.3, 0.5
+                    pos_hint: {'center_y': 0.5}
+                    background_color: 0,0,0,0
+                    text: 'Entrar'
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    color: 0,0,0, 1
+                    font_size: self.height/2
+                    on_release: root.entra(self)
+        Label:
+            id: verificacao
+            size_hint:1, 0.05
+            text: ''
+            font_size: 16
+            color: 1,64/255,64/255, 0.7

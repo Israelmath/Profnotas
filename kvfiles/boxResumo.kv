@@ -1,0 +1,22 @@
+<BoxResumo>
+    canvas.before:
+        Color:
+            rgba: 74/255,195/255,254/255, 1
+        Rectangle:
+            pos: self.x + self.height/8, self.y
+            size: self.width - self.height/4, self.height
+        Rectangle:
+            pos: self.x, self.y + self.height/8
+            size: self.width, self.height - self.height/4
+        Ellipse:
+            pos: self.x, self.y
+            size: self.height/4, self.height/4
+        Ellipse:
+            pos: self.x, self.y + self.height - self.height/4
+            size: self.height/4, self.height/4
+        Ellipse:
+            pos: self.x + self.width - self.height/4, self.y + self.height -  self.height/4
+            size: self.height/4, self.height/4
+        Ellipse:
+            pos: self.x + self.width - self.height/4, self.y
+            size: self.height/4, self.height/4

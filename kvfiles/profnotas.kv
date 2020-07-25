@@ -1,0 +1,116 @@
+#:import Factory kivy.factory.Factory
+#:import C kivy.utils.get_color_from_hex
+
+<Gerenciador>
+    LoginTela:
+        name: 'Tela de login'
+    CriarUsuarioTela:
+        name: 'Cria usuario'
+    MenuPrincipal:
+        name: 'Menu inicial'
+    CalendarioTela:
+        name: 'Calendario'
+    AdicionaAlunoTela:
+        name: 'Adiciona aluno'
+    BuscaAlunoTela:
+        name: 'Busca aluno'
+    ListarAlunoTela:
+        name: 'Listar alunos'
+    InfoTela:
+        name: 'Editar info'
+
+<RedacoesInput>
+    canvas.before:
+        Color:
+            rgba: 0,0,0,1
+        Line:
+            points: self.x, self.y, self.x+self.width, self.y
+            width: 1
+
+<BordaPreta@Button>
+    canvas:
+        Color:
+            rgba: 0,0,0, 1
+        Rectangle:
+            pos: self.x, self.y
+            size: 1, self.height
+        Rectangle:
+            pos: self.x + 1, self.y + self.height - 1
+            size: self.width - 1, 1
+        Rectangle:
+            pos: self.x + self.width - 1, self.y
+            size: 1, self.height - 1
+        Rectangle:
+            pos: self.x + 1, self.y
+            size: self.width - 2, 1
+
+<TituloDir@BoxLayout>
+    size_hint_y: None
+    height: 50
+    canvas.before:
+        Color:
+            rgba: 213/255, 223/255, 254/255, 1
+        Rectangle:
+            pos: self.pos
+            size: self.width - self.height/2, self.height
+        Ellipse:
+            pos: self.x + self.width - self.height, self.y
+            size: self.height, self.height
+
+<BotaoVoltar@Button>
+    background_normal: 'Images/signs.png'
+    border: 0,0,0,0
+    size_hint: None, None
+    size: 35,35
+    on_release: app.root.current = 'Menu inicial'
+        
+<TituloTela@Label>
+    size_hint: 0.8, 1
+    font_name: 'Fonts/AmaticSC-Bold.ttf'
+    color: 11/255,72/255,107/255, 1
+    font_size: 60
+    bold: True
+
+<LogineSenha@TextInput>
+    font_size: '14dp'
+    background_color: 0,0,0,0
+    cursor_color: C('#ffffff')
+    canvas.before:
+        Color:
+            rgba: C('#ffffff')
+    canvas.after:
+        Color:
+            rgb: C('#0f192e')
+        Ellipse:
+            angle_start:180
+            angle_end:360
+            pos:self.x - self.height/2, self.y
+            size: self.height, self.height
+        Ellipse:
+            angle_start: 0
+            angle_end: 180
+            pos: self.x + self.width - self.height/2.0, self.y
+            size: self.height, self.height
+        Color:
+            rgba: C('#3f92db')
+        Line:
+            points: self.x, self.y, self.x + self.width, self.y
+        Line:
+            points: self.x, self.y + self.height, self.x + self.width, self.y + self.height
+        Line:
+            ellipse: self.x - self.height/2, self.y, self.height, self.height, 180, 360
+        Line:
+            ellipse: self.x + self.width - self.height/2.0, self.y, self.height, self.height, 0, 180
+
+<EntrarCadastrar@Button>
+    canvas.before:
+        Color:
+            rgba: 0,180/255,1, 0.8
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [self.height/2.0]
+
+
+
+

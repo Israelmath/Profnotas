@@ -1,0 +1,64 @@
+<BuscaAlunoTela>
+    canvas.before:
+        Color:
+            rgba: 1,1,1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        spacing: 7
+        BoxLayout:
+            size_hint: 1, 0.2
+            padding: 10, 5
+            BotaoVoltar:
+                pos_hint: {'center_x': 1, 'top': 0.7}
+            TituloTela:
+                text: 'Busca aluno'
+            BotaoMenu:
+                pos_hint: {'left': 1, 'top': 0.8}
+        BoxLayout:
+            size_hint: 0.5, 0.25
+            orientation: 'vertical'
+            spacing: 5
+            TituloDir:
+                Label:
+                    text: 'Digite o nome ou o número do(a) aluno(a)'
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    color: 0,0,0, 1
+                    font_size: 30
+            BoxLayout:
+                orientation: 'horizontal'
+                padding: 10, 3, 0, 0
+                spacing: 15
+                size_hint: None, None
+                height: 39
+                width: self.parent.width - 50
+                TextInput:
+                    id: busca_aluno_bar
+                    multiline: False
+                    write_tab: False
+                    padding: 10,0
+                    cursor_width: 2
+                    size_hint: 0.5, 0.9
+                    background_color: 0,0,0,0.05
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    color: 0,0,0, 1
+                    font_size: 25
+                    on_text_validate: root.busca()
+                Button:
+                    background_normal: 'Images/procurar.png'
+                    border: 0,0,0,0
+                    size_hint: None, None
+                    width: 39
+                    height: 39
+                    on_release: root.busca()
+        ScrollView:
+            padding: 0,10,0,0
+            BoxLayout:
+                orientation: 'vertical'
+                padding: self.width/10,0,self.width/10,10
+                id: alunos_buscados
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 8

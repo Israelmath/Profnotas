@@ -1,0 +1,43 @@
+<MenuPrincipal>
+    canvas.before:
+        Color:
+            rgba: 1,1,1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [50, 30, 50, 50]
+        BoxLayout:
+            size_hint: 1, 0.2
+            Label:
+                size_hint: 0.8, 0.6
+                pos_hint: {'center_x': 0.5, 'top': 1}
+                text: 'ProfNotas'
+                font_name: 'Fonts/AmaticSC-Bold.ttf'
+                color: 11/255,72/255,107/255, 1
+                font_size: 60
+            SaudacaoBox:
+                orientation: 'vertical'
+                size_hint: 0.2, 0.6
+                pos_hint: {'right': 1, 'top': 1}
+                Label:
+                    id: saudacao
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: max(self.height, self.width)/9.5
+                    color: 0,0,0,1
+                Label:
+                    id: data
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: max(self.height, self.width)/13
+                    color: 0,0,0,1
+                Label:
+                    id: hora
+                    font_name: 'Fonts/AmaticSC-Bold.ttf'
+                    font_size: max(self.height, self.width)/13
+                    color: 0,0,0,1
+        GridLayout:
+            id: botoes_menu_principal
+            size_hint: 1, 0.8
+            spacing: 10
+            cols: 2
