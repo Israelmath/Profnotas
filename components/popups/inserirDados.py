@@ -9,7 +9,7 @@ from kivy.uix.popup import Popup
 import redis
 from kivy.uix.textinput import TextInput
 
-from DAOs.ConfigDB import search_user, atualiza_notas
+from DAOs.daoAlunos import search_user, atualiza_notas
 from components.popups.excluirPop import ExcluirPop
 
 Builder.load_file(join(__file__, pardir, pardir, pardir, 'kvfiles/inserirDados.kv'))

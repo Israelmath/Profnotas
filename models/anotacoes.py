@@ -8,8 +8,8 @@ from models.notaCompromisso import NotaCompromisso
 
 Builder.load_file(join(__file__, pardir, pardir, 'kvfiles/anotacoes.kv'))
 
-class Anotacoes(BoxLayout):
 
+class Anotacoes(BoxLayout):
 
     def apresenta_compromisso(self):
         self.ids.notas.add_widget(AdicionaAnotacao(text='Olá!',

@@ -8,7 +8,7 @@ from Screens.adicionaAlunoTela import AdicionaAlunoTela
 from models.formAluno import FormAluno
 from Screens.listarAlunoTela import ListarAlunoTela
 from Relatorio import CriarRelatorio
-from DAOs.ConfigDB import *
+from DAOs.DBConfig import *
 from components.popups.editarDadosCadastrais import EditarDadosCadastrais
 from components.popups.inserirDados import InserirDados
 from kivy.lang.builder import Builder

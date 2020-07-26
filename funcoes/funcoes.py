@@ -1,5 +1,7 @@
 def analisa_data(data):
 
+    print(data)
+
     aux = data.rsplit('/')[::-1]
     data_reverse = ''
     for d in aux:

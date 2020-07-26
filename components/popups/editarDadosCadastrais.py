@@ -4,7 +4,7 @@ from kivy.lang import Builder
 from kivy.uix.popup import Popup
 import redis
 
-from DAOs.ConfigDB import search_user, atualiza_dados_cadastrais
+from DAOs.daoAlunos import search_user, atualiza_dados_cadastrais
 from components.alunoNaLista import AlunoNaLista
 
 Builder.load_file(join(__file__, pardir, pardir, pardir, 'kvfiles/editarDadosCadastrais.kv'))

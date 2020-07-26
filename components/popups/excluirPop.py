@@ -8,7 +8,7 @@ from kivy.uix.label import Label
 from kivy.uix.popup import Popup
 import redis
 
-from DAOs.ConfigDB import del_user
+from DAOs.daoAlunos import del_user
 
 Builder.load_file(join(__file__, pardir, pardir, pardir, 'kvfiles/excluirPop.kv'))
 

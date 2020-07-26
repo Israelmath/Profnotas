@@ -11,7 +11,7 @@ from os.path import join, pardir
 from os import getcwd
 
 import Graphs
-from DAOs.ConfigDB import busca_banco, busca_info
+from DAOs.DBConfig import busca_banco, busca_info
 from models.professor import Professor
 
 Builder.load_file(join(__file__, pardir, pardir, 'kvfiles/loginTela.kv'))
@@ -57,6 +57,8 @@ class LoginTela(Screen):
             ids_tela.verificacao.text = 'Login ou senha incorretos. Tente novamente.'
 
     def limpa_info(self, *args):
+        self.ids.login.text = ''
+        self.ids.senha.text = ''
         self.ids.verificacao.text = ''
 
     def sair(self, *args, **kwargs):

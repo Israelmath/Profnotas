@@ -11,7 +11,8 @@ from pylatex import Document, Section, Subsection, Tabular, MultiColumn, \
 from pylatex.utils import bold
 from pylatex.basic import NewLine, LargeText
 from numpy import mean
-from DAOs.ConfigDB import search_user, busca_notas, list_all
+
+from DAOs.daoAlunos import search_user, list_all, busca_notas
 from Graphs import Graficos
 
 

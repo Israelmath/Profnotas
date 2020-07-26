@@ -5,7 +5,8 @@ from kivy.clock import Clock
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-from DAOs.ConfigDB import busca_banco, inicia_banco, insere_professor
+from DAOs.DBConfig import busca_banco, inicia_banco
+from DAOs.daoProfessor import insere_professor
 
 Builder.load_file(join(__file__, pardir, pardir, 'kvfiles/criarUsuarioTela.kv'))
 

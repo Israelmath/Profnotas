@@ -6,7 +6,7 @@ from kivy.uix.screenmanager import Screen
 from os.path import join
 from os import pardir
 
-from DAOs.ConfigDB import busca_info
+from DAOs.DBConfig import busca_info
 from components.imagemInicial import ImagemInicial
 import redis
 
@@ -36,7 +36,6 @@ class MenuPrincipal(Screen):
 
         ids_tela = self.ids
         professor = busca_info(id_professor)
-        print({f'professor: {professor}'})
         dia_da_semana = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado',
                          'Domingo']
         mes = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro',

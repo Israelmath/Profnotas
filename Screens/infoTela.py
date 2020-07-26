@@ -6,7 +6,6 @@ from kivy.uix.screenmanager import Screen
 import redis
 
 import Graphs
-from DAOs.ConfigDB import busca_notas, search_user, atualiza_medias
 from Verificadores import calcula_media_trimestral, media_final
 from auxiliarClasses.auxiliar import AlterarGraphBubble
 from components.boxMedias import BoxMedias

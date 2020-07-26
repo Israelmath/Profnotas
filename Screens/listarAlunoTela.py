@@ -4,7 +4,7 @@ import redis
 from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 
-from DAOs.ConfigDB import list_all
+from DAOs.daoAlunos import list_all
 from components.alunoNaLista import AlunoNaLista
 
 Builder.load_file(join(__file__, pardir, pardir, 'kvfiles/listarAlunoTela.kv'))

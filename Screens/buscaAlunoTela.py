@@ -4,7 +4,7 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen
 import redis
 
-from DAOs.ConfigDB import search_user
+from DAOs.daoAlunos import search_user
 from components.alunoNaLista import AlunoNaLista
 
 Builder.load_file(join(__file__, pardir, pardir, 'kvfiles/buscaAlunoTela.kv'))

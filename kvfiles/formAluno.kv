@@ -1,70 +1,74 @@
 <FormAluno>
     GridLayout:
         orientation: 'vertical'
-        spacing: 15
-        padding: 20,15,110,20
+        spacing: 20
+        padding: 50,15,5,20
         pos_hint: {'center': 1, 'middle': 1}
         rows: 5
         BoxLayout:
-            valign: 'center'
+            spacing: 50
             Label:
+                pos_hint: {'center_y': 0.55}
                 text: 'Nome:'
                 color: 0,0,0, 1
                 font_name: 'Fonts/AmaticSC-Bold.ttf'
-                font_size: min(self.width, self.height)/1.5
+                font_size: min(self.width, self.height)/2
                 size_hint: 0.2, 1
             TextInput:
+                pos_hint: {'center_y': 0.45}
                 id: Nome
-                size_hint: 0.7, 1
-                hint_text_color: 11/255,72/255,107/255, 0.9
+                hint_text_color: 11/255,72/255,107/255, 0.7
                 hint_text: ' Digite o nome do(a) aluno(a)'
-                font_size: min(self.width, self.height)/1.5
+                font_size: min(self.width, self.height)/2
                 background_color: 0,0,0,0
                 foreground_color: 0,0,0, 1
                 font_name: 'Fonts/AmaticSC-Bold.ttf'
-                color: 11/255,72/255,107/255, 0.9
                 multiline: False
                 write_tab: False
+                size_hint: 0.9, 1
             BoxLayout:
                 size_hint: 0.1, 1
         BoxLayout:
+            spacing: 2
             Label:
+                pos_hint: {'center_y': 0.55}
                 text: 'Sobrenome: '
                 color: 0,0,0, 1
                 font_name: 'Fonts/AmaticSC-Bold.ttf'
-                font_size: min(self.width, self.height)/1.5
+                font_size: min(self.width, self.height)/2
                 size_hint: 0.2, 1
             TextInput:
+                pos_hint: {'center_y': 0.45}
                 id: Sobrenome
-                size_hint: 0.7, 1
-                hint_text_color: 11/255,72/255,107/255, 0.9
+                size_hint: 0.9, 1
+                hint_text_color: 11/255,72/255,107/255, 0.7
                 hint_text: ' Digite o sobrenome do(a) aluno(a)'
-                font_size: min(self.width, self.height)/1.5
+                font_size: min(self.width, self.height)/2
                 background_color: 0,0,0,0
                 foreground_color: 0,0,0, 1
                 font_name: 'Fonts/AmaticSC-Bold.ttf'
-                color: 11/255,72/255,107/255, 0.9
                 multiline: False
                 write_tab: False
             BoxLayout:
                 size_hint: 0.1, 1
         BoxLayout:
             Label:
+                pos_hint: {'center_y': 0.55}
                 text: 'Nº: '
                 color: 0,0,0, 1
                 font_name: 'Fonts/AmaticSC-Bold.ttf'
-                font_size: min(self.width, self.height)/1.5
+                font_size: min(self.width, self.height)/2
                 size_hint: 0.2, 1
             TextInput:
+                pos_hint: {'center_y': 0.45}
                 id: Numero
-                size_hint: 0.7, 1
-                hint_text_color: 11/255,72/255,107/255, 0.9
+                size_hint: 0.9, 1
+                hint_text_color: 11/255,72/255,107/255, 0.7
                 hint_text: ' Digite o número do(a) aluno(a)'
-                font_size: min(self.width, self.height)/1.5
+                font_size: min(self.width, self.height)/2
                 background_color: 0,0,0,0
                 foreground_color: 0,0,0, 1
                 font_name: 'Fonts/AmaticSC-Bold.ttf'
-                color: 11/255,72/255,107/255, 0.9
                 input_filter: 'int'
                 multiline: False
                 write_tab: False
@@ -72,21 +76,22 @@
                 size_hint: 0.1, 1
         BoxLayout:
             Label:
+                pos_hint: {'center_y': 0.55}
                 text: 'Série: '
                 color: 0,0,0, 1
                 font_name: 'Fonts/AmaticSC-Bold.ttf'
-                font_size: min(self.width, self.height)/1.5
+                font_size: min(self.width, self.height)/2
                 size_hint: 0.2, 1
             TextInput:
+                pos_hint: {'center_y': 0.45}
                 id: Serie
-                size_hint: 0.7, 1
-                hint_text_color: 11/255,72/255,107/255, 0.9
+                size_hint: 0.9, 1
+                hint_text_color: 11/255,72/255,107/255, 0.7
                 hint_text: ' Digite a série do(a) aluno(a)'
-                font_size: min(self.width, self.height)/1.5
+                font_size: min(self.width, self.height)/2
                 background_color: 0,0,0,0
                 foreground_color: 0,0,0, 1
                 font_name: 'Fonts/AmaticSC-Bold.ttf'
-                color: 11/255,72/255,107/255, 0.9
                 input_filter: 'int'
                 multiline: False
                 write_tab: False
@@ -94,21 +99,22 @@
                 size_hint: 0.1, 1
         BoxLayout:
             Label:
+                pos_hint: {'center_y': 0.55}
                 text: 'Turma:'
                 color: 0,0,0, 1
                 font_name: 'Fonts/AmaticSC-Bold.ttf'
-                font_size: min(self.width, self.height)/1.5
+                font_size: min(self.width, self.height)/2
                 size_hint: 0.2, 1
             TextInput:
+                pos_hint: {'center_y': 0.45}
                 id: Turma
-                size_hint: 0.7, 1
-                hint_text_color: 11/255,72/255,107/255, 0.9
+                size_hint: 0.9, 1
+                hint_text_color: 11/255,72/255,107/255, 0.7
                 hint_text: ' Digite a turma do(a) aluno(a)'
-                font_size: min(self.width, self.height)/1.5
+                font_size: min(self.width, self.height)/2
                 background_color: 0,0,0,0
-                foreground_color: 0,0,0, 1
+                foreground_color: 0,0,0,1
                 font_name: 'Fonts/AmaticSC-Bold.ttf'
-                color: 11/255,72/255,107/255, 0.9
                 multiline: False
                 write_tab: False
             BoxLayout:

@@ -4,7 +4,7 @@ from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
 import redis
 
-from DAOs.ConfigDB import insere_aluno
+from DAOs.daoAlunos import insere_aluno
 
 Builder.load_file(join(__file__, pardir, pardir, 'kvfiles/formAluno.kv'))
 
