@@ -17,15 +17,16 @@
             BotaoMenu:
                 pos_hint: {'left': 1, 'top': 0.7}
         BoxLayout:
-            size_hint: 0.5, 0.8
+            size_hint: 1, 0.8
             padding: 20,10,20,20
-            orientation: 'vertical'
             RoundedBox:
+                size_hint: 0.7, 1
                 BoxLayout:
                     orientation: 'vertical'
                     Image:
+                        padding: 0,20,0,0
                         size_hint: 0.2, 0.2
-                        pos_hint: {'center_x': 0.5}
+                        pos_hint: {'center_x': 0.5, 'center_y': 0}
                         source: 'Images/student.png'
                     FormAluno:
                         id: form
@@ -37,17 +38,28 @@
                         Label:
                             id: verificacao
                             color: 1,64/255,64/255, 0.7
-                        Button:
-                            padding: 0,50
-                            size_hint: None, None
-                            size: 60,60
-                            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                            background_normal: 'Images/insert.png'
-                            border: 0,0,0,0
-                            on_release:
-                                app.root.get_screen('Adiciona aluno').verifica_info()
 
-
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.5, 1
+                Label:
+                    id: show_NomeSobrenome
+                    color: 0,0,0,0.9
+                Label:
+                    id: show_Numero
+                    color: 0,0,0,0.9
+                Label:
+                    id: show_Serie
+                    color: 0,0,0,0.9
+                Label:
+                    id: show_Turma
+                    color: 0,0,0,0.9
+                BoxLayout:
+                Button:
+                    id: btn_config
+                    background_color: 1,1,1,0
+                    on_release:
+                        app.root.get_screen('Adiciona aluno').verifica_info()
 
 <RoundedBox@BoxLayout>
     canvas.before:

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3c8a5d8e-b22d-4500-b613-50e6291995ba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Screens/adicionaAlunoTela.py" beforeDir="false" afterPath="$PROJECT_DIR$/Screens/adicionaAlunoTela.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kvfiles/adicionaAlunoTela.kv" beforeDir="false" afterPath="$PROJECT_DIR$/kvfiles/adicionaAlunoTela.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kvfiles/formAluno.kv" beforeDir="false" afterPath="$PROJECT_DIR$/kvfiles/formAluno.kv" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Israelmath &lt;israel.usp@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1axZSJjuyXrvjgvtugToS7wGUdG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models" />
+      <recent name="$PROJECT_DIR$/kvfiles" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/DataBase" />
+      <recent name="$PROJECT_DIR$/DataBase/DAOs" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="TestBD" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Programa_Joice" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestBD.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Profnotas" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.TestBD" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.TestBD" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c8a5d8e-b22d-4500-b613-50e6291995ba" name="Default Changelist" comment="" />
+      <created>1587679203388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587679203388</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Fiz algumas refatorações que faltavam, e mudei alguns layouts.">
+      <created>1595728568230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595728568230</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/Escola-com-db" />
+    </ignored-roots>
+    <MESSAGE value="Fiz algumas refatorações que faltavam, e mudei alguns layouts." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fiz algumas refatorações que faltavam, e mudei alguns layouts." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595788420613">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="418" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595788420613" />
+    <state x="634" y="353" width="716" height="399" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595638559144">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="634" y="353" width="716" height="399" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595638559144" />
+    <state x="694" y="423" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1595620801126">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="694" y="423" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595620801126" />
+    <state x="608" y="139" width="694" height="827" key="#main" timestamp="1595788359943">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="608" y="139" width="694" height="827" key="#main/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595788359943" />
+    <state x="481" y="89" width="948" height="927" key="CommitChangelistDialog2" timestamp="1595728568108">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="481" y="89" width="948" height="927" key="CommitChangelistDialog2/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595728568108" />
+    <state x="737" y="296" width="527" height="513" key="FileChooserDialogImpl" timestamp="1595693743094">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="737" y="296" width="527" height="513" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595693743094" />
+    <state width="1897" height="313" key="GridCell.Tab.0.bottom" timestamp="1595794843583">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="313" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595794843583" />
+    <state width="1897" height="313" key="GridCell.Tab.0.center" timestamp="1595794843583">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="313" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595794843583" />
+    <state width="1897" height="313" key="GridCell.Tab.0.left" timestamp="1595794843583">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="313" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595794843583" />
+    <state width="1897" height="313" key="GridCell.Tab.0.right" timestamp="1595794843583">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="313" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595794843583" />
+    <state width="1897" height="343" key="GridCell.Tab.1.bottom" timestamp="1595639869724">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="343" key="GridCell.Tab.1.bottom/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595639869724" />
+    <state width="1897" height="343" key="GridCell.Tab.1.center" timestamp="1595639869723">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="343" key="GridCell.Tab.1.center/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595639869723" />
+    <state width="1897" height="343" key="GridCell.Tab.1.left" timestamp="1595639869723">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="343" key="GridCell.Tab.1.left/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595639869723" />
+    <state width="1897" height="343" key="GridCell.Tab.1.right" timestamp="1595639869724">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1897" height="343" key="GridCell.Tab.1.right/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595639869724" />
+    <state x="441" y="187" key="SettingsEditor" timestamp="1595693748177">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="441" y="187" key="SettingsEditor/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595693748177" />
+    <state x="1920" y="0" width="1280" height="720" key="dock-window-1" timestamp="1595794121405">
+      <screen x="1920" y="0" width="1280" height="720" />
+    </state>
+    <state x="1920" y="0" width="1280" height="720" key="dock-window-1/0.27.1920.1053/1920.0.1280.720@0.27.1920.1053" timestamp="1595794121405" />
+  </component>
+</project>
